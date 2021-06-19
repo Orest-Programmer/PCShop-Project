@@ -37,7 +37,7 @@ if(isset($data['signin'])){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?<?echo time();?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
     <title>PCShop</title>
 </head>
@@ -76,13 +76,16 @@ if(isset($data['signin'])){
 
 <section>
     <div class="container">
-        <h1>Форма авторизації</h1>
-        <form action="login-test.php" method="post">
+
+        <form action="login-test.php" method="post" >
+        <h1 class="text_rl">Форма авторизації</h1><br>
             <input type="text" class="form-control" name="login" id="login" placeholder="Введіть логін"><br>
 
             <input type="password" class="form-control" name="pass" id="pass" placeholder="Введіть пароль"><br>
-            <button class="btn btn-success" type="submit" name="signin" >Авторизуватися</button>
-            <a href="register-test.php">Зареєструватися</a>
+            <div class="rl">
+                <button class="btn btn-success" type="submit" name="signin" >Авторизуватися</button>
+                <a href="register-test.php">Зареєструватися</a>
+            </div><br>
 			
         </form>
         <p><?php if($showError){echo showError($errors);}?></p>

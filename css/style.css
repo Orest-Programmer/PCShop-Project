@@ -193,3 +193,30 @@ div{
     margin: 10px;
     border: solid black;
 }
+
+form{
+    width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+}
+
+
+.text_rl {
+    width: 500px;
+    color: #d00505;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.rl{
+    width: 300px;
+    margin: 0 auto;
+}
+
+footer{
+    position: fixed;
+    left: 0; bottom: 0;
+    color: #fff;
+    width: 100%;
+}
